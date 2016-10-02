@@ -1,0 +1,131 @@
+body{
+    background-color: #F3F3F3;
+    color: #60656A;
+}
+
+.dashboard-panel{
+    background-color: #F3F3F3;
+    padding: 20px 30px;
+}
+
+.dashboard-panel{
+    margin-bottom: 5%;
+}
+
+.dashboard-panel #chart{
+    width: 80%;
+    text-align: left;
+    display: inline-block;
+}
+
+.dashboard-panel .legend-chart{
+    display: inline-block;
+    width: 19%;
+    vertical-align: top;
+    margin-top: 25px;
+}
+
+.dashboard-panel .legend-chart ul{
+    list-style: none;
+}
+
+.dashboard-panel .legend-chart ul li{
+    border-left-style: solid;
+    border-left-width: 5px;
+    margin-bottom: 40px;
+    width: 65%;
+}
+
+.dashboard-panel .legend-chart .info-name{
+    padding-left: 15px;
+    font-size: 20px;
+}
+
+.dashboard-panel .legend-chart .info-number{
+    padding-left: 15px;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.dashboard-panel .legend-chart .impressions{
+    border-left-color: blue;
+}
+
+.dashboard-panel .legend-chart .clicks{
+    border-left-color: red;
+}
+
+.dashboard-panel .legend-chart .ctr{
+    border-left-color: green;
+}
+
+.dashboard-panel .btn-types{
+    width: 15%;
+    float: left;
+    margin-right: 25px;
+}
+
+.dashboard-panel .select-game, .dashboard-panel .select-industry{
+    display: inline-block;
+}
+
+.dashboard-panel .select-game{
+    margin-right: 25px;
+}
+
+.dashboard-panel #datepicker{
+    float: right;
+}
+
+.dashboard-panel .btn-types .ios, .dashboard-panel .btn-types .android{
+    width: 50%;
+}
+
+.dashboard-panel .btn-types .ios{
+    float: left;
+}
+
+.dashboard-panel .btn-types .android{
+    float: right;
+}
+
+.dashboard-panel .btn-options {
+    color: #333;
+    background-color: #fff;
+    border-color: #ccc;
+    border-radius: 0;
+}
+
+.dashboard-panel .btn-options:focus, .dashboard-panel .active{
+    color: #fff;
+    background-color: #337ab7;
+    border-color: #2e6da4;
+}
+
+.dashboard-panel .input-group{
+    width: 20%;
+    border-radius: 0;
+}
+
+/* customise highcharts classes */
+.highcharts-legend-item rect{
+    display: none;
+}
+
+.highcharts-no-data text{
+    transform: translate(5px, -5px);
+}
+
+/* classes for highchart */
+.rectangle {
+    width: 30px;
+    height: 11px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+.customTooltip{
+    color: #868487;
+    text-align: center;
+}

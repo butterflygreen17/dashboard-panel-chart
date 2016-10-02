@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Include jQuery -->
+  	<script src="libs/jquery/jquery-3.1.1.min.js"></script>
+    <!-- Include Highcharts -->
+  	<script src="libs/highcharts/highcharts.js"></script>
+    <script src="libs/highcharts/no-data-to-display.js"></script>
+    <!-- Include Bootstrap -->
+    <script src="libs/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="libs/moment/moment.min.js"></script>
+    <link rel="stylesheet" href="libs/bootstrap-3.3.7/css/bootstrap.min.css">
+    <!-- Include Date Range Picker -->
+    <script type="text/javascript" src="libs/daterangepicker/js/daterangepicker.js"></script>
+    <link rel="stylesheet" type="text/css" href="libs/daterangepicker/css/daterangepicker.css" />
+    <script type='text/javascript' src="js/main.js"></script>
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+
+  <body>
+    <div class="dashboard-panel">
+      <div>
+        <div class="btn-types">
+      	  <button class="btn btn-options ios active">IOs</button>
+      	  <button class="btn btn-options android">Android</button>
+        </div>
+        <div class="select-options">
+        	<select class="input-group form-control select-game">
+            <option>Angry Birds</option>
+          </select>
+          <select class="input-group form-control select-industry">
+            <option>Advertising</option>
+          </select>
+         <div class="input-group date" id="datepicker">
+            <input type="text" name="daterange" class="form-control" value="" />
+            <span class="input-group-addon">
+                <span class="glyphicon glyphicon-calendar"></span>
+            </span>
+          </div>
+        </div>
+      </div>
+
+    	<div id="chart"></div>
+      <div class="legend-chart">
+        <ul>
+          <li class="impressions">
+            <span class="impressions-number info-number"></span>
+            <span class="info-name">Impressions</span>
+          </li>
+          <li class="clicks">
+            <span class="clicks-number info-number"></span>
+            <span class="info-name">Clicks</span>
+          </li>
+          <li class="ctr">
+            <span class="ctr-number info-number"><span>%</span></span>
+            <span class="info-name">CTR</span>
+          </li>
+        </ul>
+      </div>
+  	</div>
+  </body>
+</html>
