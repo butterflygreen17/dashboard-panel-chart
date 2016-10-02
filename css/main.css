@@ -12,16 +12,7 @@ body{
     margin-bottom: 5%;
 }
 
-.dashboard-panel #chart{
-    width: 80%;
-    text-align: left;
-    display: inline-block;
-}
-
 .dashboard-panel .legend-chart{
-    display: inline-block;
-    width: 19%;
-    vertical-align: top;
     margin-top: 25px;
 }
 
@@ -60,9 +51,7 @@ body{
 }
 
 .dashboard-panel .btn-types{
-    width: 15%;
-    float: left;
-    margin-right: 25px;
+    padding-left: 0;
 }
 
 .dashboard-panel .select-game, .dashboard-panel .select-industry{
@@ -75,6 +64,11 @@ body{
 
 .dashboard-panel #datepicker{
     float: right;
+    width: 27%;
+}
+
+.dashboard-panel #datepicker input, .dashboard-panel #datepicker span{
+  border-radius: 0;
 }
 
 .dashboard-panel .btn-types .ios, .dashboard-panel .btn-types .android{
@@ -116,7 +110,7 @@ body{
     transform: translate(5px, -5px);
 }
 
-/* classes for highchart */
+/* classes for highcharts */
 .rectangle {
     width: 30px;
     height: 11px;

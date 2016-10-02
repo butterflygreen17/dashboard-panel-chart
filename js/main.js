@@ -246,14 +246,6 @@ $(function () {
 
         /* initialise chartsObject methods*/
         init: function() {
-            dashboardPanel = $('.dashboard-panel'),
-            android = dashboardPanel.find('.android'),
-            datePicker = dashboardPanel.find('#datepicker'),
-            datePickerInput = datePicker.find('input'),
-            impressionsNumber = dashboardPanel.find('.impressions-number'),
-            clicksNumber = dashboardPanel.find('.clicks-number'),
-            ctrNumber = dashboardPanel.find('.ctr-number');
-
            this.createChart(this.startDatePicker, this.endDatePicker);
            this.initialiseDates(this.startDatePicker, this.endDatePicker);
            this.initDateRangePicker(this.startDatePicker, this.endDatePicker);
@@ -370,7 +362,7 @@ $(function () {
 
         /* find chart's series by date and type (android, ios) */
         findChartSeriesByDateAndType: function(startDate, endDate) {
-            if (android.hasClass('active')) {
+            if ($('.android').hasClass('active')) {
                 var clicks = [],
                     impressions = [];
 
@@ -422,12 +414,12 @@ $(function () {
         /* initialise dates */
         initialiseDates: function(startDatePicker, endDatePicker) {
             var initialDate = startDatePicker + ' - ' + endDatePicker;
-            datePickerInput.val(initialDate);
+            $('#datepicker input').val(initialDate);
         },
 
         /* initialise date range picker */
         initDateRangePicker: function(startDatePicker, endDatePicker) {
-            datePicker.daterangepicker(
+            $('#datepicker').daterangepicker(
               { 
                 locale: {
                     format: 'MM/DD/YYYY',
@@ -439,7 +431,7 @@ $(function () {
                 opens: 'left'
               },
               function(start, end, label) {
-                datePickerInput.val(start.format('MM/DD/YYYY') + ' - ' + end.format('MM/DD/YYYY'));
+                $('#datepicker input').val(start.format('MM/DD/YYYY') + ' - ' + end.format('MM/DD/YYYY'));
                 var chart =  $('#chart').highcharts();
                 chartsObject.drawChart(chart, start, end);
               }
@@ -492,13 +484,13 @@ $(function () {
         showTotalClicksAndImpressions: function(clicks, impressions) {
             var totalClicksAndImpressions = this.calculateTotalClicksAndImpressions(clicks, impressions);
             if (totalClicksAndImpressions['clicks'] != null || totalClicksAndImpressions['impressions'] != null) {
-                impressionsNumber.html(totalClicksAndImpressions['impressions']);
-                clicksNumber.html(totalClicksAndImpressions['clicks']);
-                ctrNumber.html(totalClicksAndImpressions['percentage'] + '%');
+                $('.impressions-number').html(totalClicksAndImpressions['impressions']);
+                $('.clicks-number').html(totalClicksAndImpressions['clicks']);
+                $('.ctr-number').html(totalClicksAndImpressions['percentage'] + '%');
             } else {
-                impressionsNumber.html(' ');
-                clicksNumber.html(' ');
-                ctrNumber.html(' ');
+                $('.impressions-number').html(' ');
+                $('.clicks-number').html(' ');
+                $('.ctr-number').html(' ');
             }
         }
     }
